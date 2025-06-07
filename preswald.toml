@@ -1,0 +1,62 @@
+# Project Metadata
+[project]
+title = "GitHub Programming Languages Analytics "
+version = "1.0.0"
+port = 8501
+slug = "github-lang-analytics-968390"
+entrypoint = "hello.py"
+description = "Analysis of programming language ecosystem trends and development "
+
+[branding]
+name = "Preswald Project"
+logo = "images/github.png"
+favicon = "images/github.ico"
+primary_color = "#F89613"
+
+# Theme (Professional GitHub-like Colors)
+[theme]
+primary_color = "#0366d6"        
+secondary_color = "#586069"      
+background_color = "#f6f8fa"     
+text_color = "#24292e"           
+accent_color = "#28a745"         
+warning_color = "#ffd33d"        
+error_color = "#d73a49"          
+
+# Data sources must match the aliases used in hello.py
+[data.issues_csv]
+type = "csv"
+path = "data/issues.csv"
+
+[data.prs_csv]
+type = "csv"
+path = "data/prs.csv"
+
+[data.repos_csv]
+type = "csv"
+path = "data/repos.csv"
+
+# Logging Configuration
+[logging]
+level = "INFO"
+format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# Application Metadata
+[app]
+author = "M.Tech Data Science Project"
+created_date = "2025-06-06"
+analytics_level = "Advanced"
+target_audience = "Technical Leadership, Software Architects, Development Teams"
+
+# Performance Settings
+[performance]
+cache_enabled = true
+lazy_loading = true
+max_rows_display = 1000
+chart_animation = true
+
+# Export Settings
+[export]
+formats = ["pdf", "csv", "json"]
+include_charts = true
+include_data = true
