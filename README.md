@@ -315,6 +315,53 @@ graph LR
     D --> E[Analytics Engine]
     E --> F[Visualization Layer]
     F --> G[Interactive Dashboard]
+    
+    %% Subgraph for Analytics Modules
+    subgraph AE [Analytics Engine]
+        E1[Language Analysis]
+        E2[Evolution & Growth]
+        E3[Momentum Analysis]  
+        E4[Competitive Analysis]
+        E5[Performance Analysis]
+    end
+    
+    %% Subgraph for Visualization Components
+    subgraph VL [Visualization Layer]
+        F1[Plotly Charts]
+        F2[Data Tables]
+        F3[KPI Metrics]
+        F4[Interactive Filters]
+    end
+    
+    %% Error Handling Path
+    C --> H[Error Handler]
+    H --> I[System Exit]
+    
+    %% Data Flow Connections
+    E1 --> F1
+    E2 --> F1
+    E3 --> F1
+    E4 --> F1
+    E5 --> F1
+    
+    E1 --> F2
+    E2 --> F2
+    E3 --> F2
+    E4 --> F2
+    E5 --> F2
+    
+    %% Styling with high contrast
+    classDef dataSource fill:#2196F3,stroke:#1976D2,stroke-width:3px,color:#FFFFFF
+    classDef processing fill:#4CAF50,stroke:#388E3C,stroke-width:3px,color:#FFFFFF
+    classDef analytics fill:#FF9800,stroke:#F57C00,stroke-width:3px,color:#FFFFFF
+    classDef visualization fill:#9C27B0,stroke:#7B1FA2,stroke-width:3px,color:#FFFFFF
+    classDef error fill:#F44336,stroke:#D32F2F,stroke-width:3px,color:#FFFFFF
+    
+    class A dataSource
+    class B,C,D processing
+    class E,E1,E2,E3,E4,E5 analytics
+    class F,F1,F2,F3,F4,G visualization
+    class H,I error
 ```
 
 ### Technology Stack
